@@ -64,9 +64,7 @@
 			children = (
 				781AA80D27247B5F00B730CF /* AppDelegate.swift */,
 				781AA80F27247B5F00B730CF /* SceneDelegate.swift */,
-				78C6595527351B840067DB18 /* SignInViewController.swift */,
-				788C47D0272EE94500DD395F /* ForgetPasswordViewController.swift */,
-				782F5A6227340A1700BF4E41 /* SignupViewController.swift */,
+				783F88572735936B00C8CE47 /* Authentication */,
 				782A494B2730D9BC00A9257D /* extensions */,
 				781AA81327247B5F00B730CF /* Main.storyboard */,
 				781AA81627247B5F00B730CF /* Assets.xcassets */,
@@ -82,6 +80,16 @@
 				782A494C2730DA0700A9257D /* PaddingTextField.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		783F88572735936B00C8CE47 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				78C6595527351B840067DB18 /* SignInViewController.swift */,
+				788C47D0272EE94500DD395F /* ForgetPasswordViewController.swift */,
+				782F5A6227340A1700BF4E41 /* SignupViewController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
