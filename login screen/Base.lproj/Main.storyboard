@@ -47,34 +47,11 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="djj-dB-elw">
                                         <rect key="frame" x="0.0" y="169" width="335" height="178"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZv-xx-amA" userLabel="Email View">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZv-xx-amA" userLabel="Email View" customClass="CustomInputView" customModule="login_screen" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="71"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkX-U1-Mfh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="21"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="21" id="Y17-TI-O1J"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NEa-j7-7fv" customClass="PaddingTextField" customModule="login_screen" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="21" width="335" height="50"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="NEa-j7-7fv" secondAttribute="bottom" id="Dfl-jv-gP3"/>
-                                                    <constraint firstAttribute="trailing" secondItem="GkX-U1-Mfh" secondAttribute="trailing" id="NdK-oI-I38"/>
-                                                    <constraint firstAttribute="trailing" secondItem="NEa-j7-7fv" secondAttribute="trailing" id="Pb0-W9-uOU"/>
-                                                    <constraint firstItem="GkX-U1-Mfh" firstAttribute="leading" secondItem="yZv-xx-amA" secondAttribute="leading" id="RPA-as-ECX"/>
-                                                    <constraint firstItem="NEa-j7-7fv" firstAttribute="top" secondItem="GkX-U1-Mfh" secondAttribute="bottom" id="Z4h-np-8Tz"/>
-                                                    <constraint firstItem="GkX-U1-Mfh" firstAttribute="top" secondItem="yZv-xx-amA" secondAttribute="top" id="d3F-aB-azj"/>
                                                     <constraint firstAttribute="height" constant="71" id="utZ-xO-9Gz"/>
-                                                    <constraint firstItem="NEa-j7-7fv" firstAttribute="leading" secondItem="yZv-xx-amA" secondAttribute="leading" id="wt4-vm-MxQ"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6d-f8-11g" userLabel="Password View">
@@ -90,14 +67,15 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iRV-By-dn3" customClass="PaddingTextField" customModule="login_screen" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="21" width="335" height="50"/>
+                                                        <rect key="frame" x="0.0" y="21" width="335" height="55"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2f-A0-j2i">
-                                                        <rect key="frame" x="0.0" y="76" width="335" height="21"/>
+                                                        <rect key="frame" x="210" y="76" width="125" height="21"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="21" id="mkX-GO-A54"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="GSl-ZX-OyH"/>
+                                                            <constraint firstAttribute="height" constant="21" id="T1f-3K-hX8"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="textColor"/>
@@ -106,16 +84,16 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="j2f-A0-j2i" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="a6d-f8-11g" secondAttribute="leading" constant="20" symbolic="YES" id="2gS-b3-VCQ"/>
                                                     <constraint firstItem="iRV-By-dn3" firstAttribute="leading" secondItem="a6d-f8-11g" secondAttribute="leading" id="6BZ-we-EY3"/>
                                                     <constraint firstAttribute="trailing" secondItem="iRV-By-dn3" secondAttribute="trailing" id="I8X-fb-9vA"/>
+                                                    <constraint firstAttribute="trailing" secondItem="j2f-A0-j2i" secondAttribute="trailing" id="PsL-wK-8cS"/>
                                                     <constraint firstItem="KK4-DY-tAB" firstAttribute="leading" secondItem="a6d-f8-11g" secondAttribute="leading" id="QkQ-Z6-Zwo"/>
                                                     <constraint firstAttribute="trailing" secondItem="KK4-DY-tAB" secondAttribute="trailing" id="Tph-tA-RSm"/>
+                                                    <constraint firstAttribute="bottom" secondItem="j2f-A0-j2i" secondAttribute="bottom" id="aGC-6O-chf"/>
                                                     <constraint firstItem="KK4-DY-tAB" firstAttribute="top" secondItem="a6d-f8-11g" secondAttribute="top" id="b6Y-bF-n3Q"/>
-                                                    <constraint firstItem="j2f-A0-j2i" firstAttribute="top" secondItem="iRV-By-dn3" secondAttribute="bottom" constant="5" id="dRc-Zh-qhg"/>
-                                                    <constraint firstItem="j2f-A0-j2i" firstAttribute="leading" secondItem="a6d-f8-11g" secondAttribute="leading" id="kAF-Jl-tGO"/>
-                                                    <constraint firstAttribute="bottom" secondItem="j2f-A0-j2i" secondAttribute="bottom" id="lYq-6e-TZb"/>
+                                                    <constraint firstItem="j2f-A0-j2i" firstAttribute="top" secondItem="iRV-By-dn3" secondAttribute="bottom" id="lKL-Tw-hOn"/>
                                                     <constraint firstAttribute="height" constant="97" id="wHM-mb-LAu"/>
-                                                    <constraint firstAttribute="trailing" secondItem="j2f-A0-j2i" secondAttribute="trailing" id="xxw-y3-0JX"/>
                                                     <constraint firstItem="iRV-By-dn3" firstAttribute="top" secondItem="KK4-DY-tAB" secondAttribute="bottom" id="yyO-Xz-oJ9"/>
                                                 </constraints>
                                             </view>
@@ -216,8 +194,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="NEa-j7-7fv" id="k8S-7e-NfC"/>
-                        <outlet property="emailView" destination="yZv-xx-amA" id="cyP-Ox-T9r"/>
+                        <outlet property="emailView" destination="yZv-xx-amA" id="IkY-Ak-Vtz"/>
                         <outlet property="forgetPasswordLabel" destination="j2f-A0-j2i" id="p3Z-sq-Rpa"/>
                         <outlet property="googleSignIN" destination="EmH-VG-nbP" id="grK-7I-0iO"/>
                         <outlet property="loginBtn" destination="y02-Cd-JNA" id="cQ6-GJ-eY4"/>
@@ -228,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jsr-6r-84m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1686" y="47"/>
+            <point key="canvasLocation" x="1894" y="34"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="eMB-c0-s2h">
@@ -253,124 +230,32 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XsG-g6-uVJ">
                                         <rect key="frame" x="0.0" y="105" width="335" height="314"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtH-CE-Ubg" userLabel="name view">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtH-CE-Ubg" userLabel="name view" customClass="CustomInputView" customModule="login_screen" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="71"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6v-qk-UxV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="21"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="21" id="1gZ-PD-XgA"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MJ5-ad-mKh">
-                                                        <rect key="frame" x="0.0" y="21" width="335" height="50"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="b6v-qk-UxV" secondAttribute="trailing" id="8ez-Sk-HZl"/>
-                                                    <constraint firstItem="MJ5-ad-mKh" firstAttribute="top" secondItem="b6v-qk-UxV" secondAttribute="bottom" id="F3T-gF-M9s"/>
-                                                    <constraint firstItem="b6v-qk-UxV" firstAttribute="leading" secondItem="qtH-CE-Ubg" secondAttribute="leading" id="OwR-rC-gta"/>
                                                     <constraint firstAttribute="height" constant="71" id="SBz-RX-eKJ"/>
-                                                    <constraint firstItem="MJ5-ad-mKh" firstAttribute="leading" secondItem="qtH-CE-Ubg" secondAttribute="leading" id="XaL-y0-VxK"/>
-                                                    <constraint firstItem="b6v-qk-UxV" firstAttribute="top" secondItem="qtH-CE-Ubg" secondAttribute="top" id="YSl-VB-rck"/>
-                                                    <constraint firstAttribute="trailing" secondItem="MJ5-ad-mKh" secondAttribute="trailing" id="iF2-yN-KNQ"/>
-                                                    <constraint firstAttribute="bottom" secondItem="MJ5-ad-mKh" secondAttribute="bottom" id="pim-x0-gAv"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4g-mu-kHH" userLabel="Email view">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4g-mu-kHH" userLabel="Email view" customClass="CustomInputView" customModule="login_screen" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="81" width="335" height="71"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYt-Lq-4zB">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="21"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="21" id="dO5-oj-9yC"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3LH-Lr-yUT">
-                                                        <rect key="frame" x="0.0" y="21" width="335" height="50"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="xYt-Lq-4zB" firstAttribute="top" secondItem="s4g-mu-kHH" secondAttribute="top" id="4G9-Ql-weS"/>
-                                                    <constraint firstAttribute="trailing" secondItem="xYt-Lq-4zB" secondAttribute="trailing" id="63Z-qS-ZYN"/>
-                                                    <constraint firstItem="3LH-Lr-yUT" firstAttribute="leading" secondItem="s4g-mu-kHH" secondAttribute="leading" id="7gR-kx-thB"/>
                                                     <constraint firstAttribute="height" constant="71" id="Qwf-rZ-Xcm"/>
-                                                    <constraint firstAttribute="trailing" secondItem="3LH-Lr-yUT" secondAttribute="trailing" id="R8V-1e-Td0"/>
-                                                    <constraint firstItem="3LH-Lr-yUT" firstAttribute="top" secondItem="xYt-Lq-4zB" secondAttribute="bottom" id="elF-dQ-xpq"/>
-                                                    <constraint firstAttribute="bottom" secondItem="3LH-Lr-yUT" secondAttribute="bottom" id="lnG-ZZ-mdO"/>
-                                                    <constraint firstItem="xYt-Lq-4zB" firstAttribute="leading" secondItem="s4g-mu-kHH" secondAttribute="leading" id="ouX-RH-wic"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Grv-eg-U1j" userLabel="password view">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Grv-eg-U1j" userLabel="password view" customClass="CustomInputView" customModule="login_screen" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="162" width="335" height="71"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLR-C3-6Q5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="21"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="21" id="13p-4U-dJm"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eNd-9M-pRd">
-                                                        <rect key="frame" x="0.0" y="21" width="335" height="50"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="eNd-9M-pRd" firstAttribute="leading" secondItem="Grv-eg-U1j" secondAttribute="leading" id="ECr-ag-m8S"/>
-                                                    <constraint firstAttribute="trailing" secondItem="eNd-9M-pRd" secondAttribute="trailing" id="JPf-4g-TW5"/>
-                                                    <constraint firstItem="MLR-C3-6Q5" firstAttribute="leading" secondItem="Grv-eg-U1j" secondAttribute="leading" id="M9z-fF-Ogj"/>
-                                                    <constraint firstItem="MLR-C3-6Q5" firstAttribute="top" secondItem="Grv-eg-U1j" secondAttribute="top" id="aba-hT-ysa"/>
-                                                    <constraint firstAttribute="trailing" secondItem="MLR-C3-6Q5" secondAttribute="trailing" id="dXQ-Db-YLC"/>
-                                                    <constraint firstItem="eNd-9M-pRd" firstAttribute="top" secondItem="MLR-C3-6Q5" secondAttribute="bottom" id="oCq-wO-OyA"/>
-                                                    <constraint firstAttribute="bottom" secondItem="eNd-9M-pRd" secondAttribute="bottom" id="uSm-pB-O0Q"/>
                                                     <constraint firstAttribute="height" constant="71" id="vd6-bR-13k"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFH-vp-97P" userLabel="confirm password view">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFH-vp-97P" userLabel="confirm password view" customClass="CustomInputView" customModule="login_screen" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="243" width="335" height="71"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCU-c0-cSl">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="21"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="21" id="EUB-oz-K5v"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ukj-OK-PGo">
-                                                        <rect key="frame" x="0.0" y="21" width="335" height="50"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="ZCU-c0-cSl" secondAttribute="trailing" id="EqX-pU-9cb"/>
-                                                    <constraint firstItem="ZCU-c0-cSl" firstAttribute="leading" secondItem="JFH-vp-97P" secondAttribute="leading" id="FnM-PZ-eN9"/>
-                                                    <constraint firstItem="ZCU-c0-cSl" firstAttribute="top" secondItem="JFH-vp-97P" secondAttribute="top" id="Tx9-gO-xAV"/>
                                                     <constraint firstAttribute="height" constant="71" id="XG0-lY-B3e"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Ukj-OK-PGo" secondAttribute="bottom" id="cnl-JR-Qrf"/>
-                                                    <constraint firstItem="Ukj-OK-PGo" firstAttribute="top" secondItem="ZCU-c0-cSl" secondAttribute="bottom" id="tnZ-b3-0Ff"/>
-                                                    <constraint firstItem="Ukj-OK-PGo" firstAttribute="leading" secondItem="JFH-vp-97P" secondAttribute="leading" id="yul-j9-PBY"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Ukj-OK-PGo" secondAttribute="trailing" id="zPM-nA-QeL"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -386,6 +271,9 @@
                                             <fontDescription key="titleFontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signupButtonTapped:" destination="ty1-AG-F4E" eventType="touchUpInside" id="Gp5-yS-Khf"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcz-DT-6Ax" userLabel="Already have an account view">
                                         <rect key="frame" x="0.0" y="615" width="335" height="30"/>
@@ -453,12 +341,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="confirmPasswordTextField" destination="Ukj-OK-PGo" id="Xgb-kq-77W"/>
+                        <outlet property="completeScreenView" destination="nD1-Bg-j5r" id="WOW-5x-nQB"/>
+                        <outlet property="confirmPasswordView" destination="JFH-vp-97P" id="fS3-UB-BfK"/>
                         <outlet property="crossImage" destination="MnS-Ha-BvS" id="EH8-kf-je0"/>
-                        <outlet property="emailTextField" destination="3LH-Lr-yUT" id="xOj-DC-aE1"/>
+                        <outlet property="emailView" destination="s4g-mu-kHH" id="9nu-1i-U7M"/>
                         <outlet property="loginLbl" destination="uTH-c8-SfD" id="KPl-Ok-xPm"/>
-                        <outlet property="nameTextField" destination="MJ5-ad-mKh" id="8qz-qL-6Er"/>
-                        <outlet property="passwordTextField" destination="eNd-9M-pRd" id="cy4-qt-Dq0"/>
+                        <outlet property="nameView" destination="qtH-CE-Ubg" id="9fi-57-7n0"/>
+                        <outlet property="passwordView" destination="Grv-eg-U1j" id="peD-Eh-8lX"/>
                         <outlet property="signupBtn" destination="mY2-vA-Fzi" id="o8I-zW-Pm8"/>
                     </connections>
                 </viewController>
@@ -519,38 +408,15 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rsB-VN-4LV">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LVk-SS-2eK">
                                         <rect key="frame" x="0.0" y="290" width="290" height="71"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oo9-sU-Ac3">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oo9-sU-Ac3" customClass="CustomInputView" customModule="login_screen" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="290" height="71"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2I4-4g-MGh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="290" height="21"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="21" id="Deh-ud-4nb"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="lqD-cq-fJD" customClass="PaddingTextField" customModule="login_screen" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="21" width="290" height="50"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="2I4-4g-MGh" firstAttribute="top" secondItem="Oo9-sU-Ac3" secondAttribute="top" id="0Hs-bU-84P"/>
-                                                    <constraint firstItem="lqD-cq-fJD" firstAttribute="leading" secondItem="Oo9-sU-Ac3" secondAttribute="leading" id="5nJ-iN-HMW"/>
-                                                    <constraint firstAttribute="trailing" secondItem="2I4-4g-MGh" secondAttribute="trailing" id="9xC-Ho-gfd"/>
                                                     <constraint firstAttribute="width" constant="290" id="JWW-Eg-wD8"/>
                                                     <constraint firstAttribute="height" constant="71" id="NZd-77-0P8"/>
-                                                    <constraint firstItem="2I4-4g-MGh" firstAttribute="leading" secondItem="Oo9-sU-Ac3" secondAttribute="leading" id="Umw-j2-nnl"/>
-                                                    <constraint firstItem="lqD-cq-fJD" firstAttribute="top" secondItem="2I4-4g-MGh" secondAttribute="bottom" id="mI0-mD-uZ4"/>
-                                                    <constraint firstAttribute="bottom" secondItem="lqD-cq-fJD" secondAttribute="bottom" id="pqc-5l-bQm"/>
-                                                    <constraint firstAttribute="trailing" secondItem="lqD-cq-fJD" secondAttribute="trailing" id="q7j-MJ-Nr4"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -634,8 +500,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="completeView" destination="VQb-9k-Vtx" id="kC3-RO-PZK"/>
                         <outlet property="crossImage" destination="dTu-OU-ZuL" id="rFS-H9-pPj"/>
-                        <outlet property="resetEmail" destination="lqD-cq-fJD" id="6ht-Gj-Op5"/>
+                        <outlet property="emailView" destination="Oo9-sU-Ac3" id="m28-WT-96W"/>
                         <outlet property="resetPasswordBtn" destination="ctO-UZ-sjc" id="Nge-Ag-JGz"/>
                         <outlet property="signUpLbl" destination="qrt-LN-dn3" id="hBX-ue-fiB"/>
                     </connections>

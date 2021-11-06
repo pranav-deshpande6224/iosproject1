@@ -11,22 +11,25 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var passwordTextField: PaddingTextField!
-    @IBOutlet weak var emailTextField: PaddingTextField!
-    @IBOutlet weak var emailView: UIView!
+//    @IBOutlet weak var emailTextField: PaddingTextField!
+//    @IBOutlet weak var emailView: UIView!
     @IBOutlet weak var passwordView: UIView!
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var signupLabel: UILabel!
     @IBOutlet weak var googleSignIN: UIButton!
     @IBOutlet weak var forgetPasswordLabel: UILabel!
+    @IBOutlet weak var emailView: CustomInputView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTextField.delegate = self
+        emailView.titleLabel.text = "Email"
+//        emailTextField.delegate = self
         passwordTextField.delegate = self
-        emailTextField.layer.borderWidth = 1
+//        emailTextField.layer.borderWidth = 1
         passwordTextField.layer.borderWidth = 1
-        emailTextField.layer.borderColor = UIColor.gray.cgColor
+//        emailTextField.layer.borderColor = UIColor.gray.cgColor
         passwordTextField.layer.borderColor = UIColor.gray.cgColor
-        emailTextField.layer.cornerRadius = 5
+//        emailTextField.layer.cornerRadius = 5
         passwordTextField.layer.cornerRadius = 5
         loginBtn.layer.cornerRadius = 20
         googleSignIN.layer.cornerRadius = 20
@@ -63,14 +66,14 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 
     func emailPasswordValidation() {
         //1 Keyboard should stop editing
-        emailTextField.resignFirstResponder()
+//        emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
 
         //2. validation of email and password should be done
-        guard let email = emailTextField.text, !email.isEmpty else {
-            showAlert(message: "Please Enter Email")
-            return
-        }
+//        guard let email = emailTextField.text, !email.isEmpty else {
+//            showAlert(message: "Please Enter Email")
+//            return
+//        }
         guard let password = passwordTextField.text, !password.isEmpty else {
             showAlert(message: "Please Enter Password")
             return
@@ -82,12 +85,12 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == emailTextField {
-            passwordTextField.becomeFirstResponder()
-        } else if textField == passwordTextField {
-            emailPasswordValidation()
-        }
-        return true
-    }
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        if textField == emailTextField {
+//            passwordTextField.becomeFirstResponder()
+//        } else if textField == passwordTextField {
+//            emailPasswordValidation()
+//        }
+//        return true
+//    }
 }

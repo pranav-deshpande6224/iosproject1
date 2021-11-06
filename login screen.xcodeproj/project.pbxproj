@@ -14,6 +14,8 @@
 		781AA81A27247B5F00B730CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781AA81827247B5F00B730CF /* LaunchScreen.storyboard */; };
 		782A494D2730DA0700A9257D /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782A494C2730DA0700A9257D /* PaddingTextField.swift */; };
 		782F5A6327340A1700BF4E41 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782F5A6227340A1700BF4E41 /* SignupViewController.swift */; };
+		786D4DC0273636840045D190 /* CustomInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786D4DBF273636840045D190 /* CustomInputView.xib */; };
+		786D4DC22736369C0045D190 /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786D4DC12736369C0045D190 /* CustomInputView.swift */; };
 		788C47D1272EE94500DD395F /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788C47D0272EE94500DD395F /* ForgetPasswordViewController.swift */; };
 		78C6595627351B840067DB18 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C6595527351B840067DB18 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +30,8 @@
 		781AA81B27247B5F00B730CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		782A494C2730DA0700A9257D /* PaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
 		782F5A6227340A1700BF4E41 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		786D4DBF273636840045D190 /* CustomInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomInputView.xib; sourceTree = "<group>"; };
+		786D4DC12736369C0045D190 /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
 		788C47D0272EE94500DD395F /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		78C6595527351B840067DB18 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,11 +89,29 @@
 		783F88572735936B00C8CE47 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				78D33EA8273631830020BD6B /* Views */,
+				78D33EA92736318D0020BD6B /* Controllers */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		78D33EA8273631830020BD6B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				786D4DBF273636840045D190 /* CustomInputView.xib */,
+				786D4DC12736369C0045D190 /* CustomInputView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		78D33EA92736318D0020BD6B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				78C6595527351B840067DB18 /* SignInViewController.swift */,
 				788C47D0272EE94500DD395F /* ForgetPasswordViewController.swift */,
 				782F5A6227340A1700BF4E41 /* SignupViewController.swift */,
 			);
-			path = Authentication;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +174,7 @@
 			files = (
 				781AA81A27247B5F00B730CF /* LaunchScreen.storyboard in Resources */,
 				781AA81727247B5F00B730CF /* Assets.xcassets in Resources */,
+				786D4DC0273636840045D190 /* CustomInputView.xib in Resources */,
 				781AA81527247B5F00B730CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +192,7 @@
 				781AA80E27247B5F00B730CF /* AppDelegate.swift in Sources */,
 				781AA81027247B5F00B730CF /* SceneDelegate.swift in Sources */,
 				788C47D1272EE94500DD395F /* ForgetPasswordViewController.swift in Sources */,
+				786D4DC22736369C0045D190 /* CustomInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
