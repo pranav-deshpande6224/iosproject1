@@ -11,21 +11,30 @@ class ForgetPasswordViewController: UIViewController {
 
     @IBOutlet weak var crossImage: UIImageView!
     @IBOutlet weak var resetPasswordBtn: UIButton!
-    @IBOutlet weak var resetEmail: PaddingTextField!
     @IBOutlet weak var signUpLbl: UILabel!
+    @IBOutlet weak var emailView: CustomInputView!
+    @IBOutlet var completeView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        emailView.titleLabel.text = "Email"
         crossImage.isUserInteractionEnabled = true
+        completeView.isUserInteractionEnabled = true
+        let completeViewTapped = UITapGestureRecognizer(target: self, action: #selector(completeViewPressed))
+        completeViewTapped.numberOfTapsRequired = 1
+        completeViewTapped.numberOfTouchesRequired = 1
+        completeView.addGestureRecognizer(completeViewTapped)
         let crossImageTapGesture = UITapGestureRecognizer(target: self, action: #selector(crossImageTapped))
         crossImage.addGestureRecognizer(crossImageTapGesture)
-        resetEmail.layer.borderWidth = 1
-        resetEmail.layer.borderColor = UIColor.gray.cgColor
-        resetEmail.layer.cornerRadius = 5
         resetPasswordBtn.layer.cornerRadius = 20
         signUpLbl.isUserInteractionEnabled = true
         let signupTapped = UITapGestureRecognizer(target: self, action: #selector(signupLblInForgetPasswordTapped))
+        signupTapped.numberOfTouchesRequired = 1
+        signupTapped.numberOfTapsRequired = 1
         signUpLbl.addGestureRecognizer(signupTapped)
+    }
+    @objc func completeViewPressed() {
+        self.view.endEditing(true)
     }
     @objc func crossImageTapped() {
         self.view.endEditing(true)
